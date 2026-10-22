@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12324a">
+<title>Design Thinking com Emojis</title>
+<style>
+:root{--navy:#12324a;--blue:#315cce;--sky:#eef5ff;--teal:#0f766e;--gold:#f3b544;--ink:#182638;--muted:#64748b;--line:#e1e8f0;--surface:#fff;--bg:#f4f7fb;--pink:#ff6f7d;--shadow:0 12px 35px rgba(18,50,74,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.5}button,input,textarea,select{font:inherit}button{cursor:pointer}.topbar{background:linear-gradient(115deg,#12324a,#244f78);color:white;padding:24px max(20px,calc((100% - 1180px)/2));display:flex;justify-content:space-between;gap:20px;align-items:center}.brand{display:flex;align-items:center;gap:14px}.brand-icon{background:#ffffff1c;border:1px solid #ffffff38;border-radius:17px;padding:12px;font-size:29px}.topbar h1{font-size:clamp(22px,3vw,31px);margin:0;letter-spacing:-.6px}.topbar p{margin:5px 0 0;color:#dceafa;font-size:14px}.top-actions{display:flex;gap:9px;flex-wrap:wrap}.container{max-width:1180px;margin:24px auto;padding:0 18px}.welcome{background:white;border:1px solid var(--line);border-radius:20px;padding:20px 22px;display:flex;justify-content:space-between;align-items:center;gap:20px;box-shadow:var(--shadow);margin-bottom:18px}.welcome h2{margin:0 0 5px;font-size:20px}.welcome p{margin:0;color:var(--muted);max-width:790px}.privacy{font-size:12px;color:#42605b;background:#e9f8f2;border-radius:12px;padding:10px 12px;max-width:220px}.layout{display:grid;grid-template-columns:260px minmax(0,1fr);gap:18px;align-items:start}.sidebar,.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow)}.sidebar{padding:14px;position:sticky;top:14px}.side-label{color:var(--muted);font-weight:750;font-size:11px;text-transform:uppercase;letter-spacing:1.2px;padding:7px 10px 9px}.nav-btn{width:100%;border:0;background:transparent;display:flex;align-items:center;gap:12px;text-align:left;padding:12px 11px;border-radius:13px;color:#435267;margin-bottom:4px}.nav-btn .n{width:34px;height:34px;display:grid;place-items:center;border-radius:10px;background:#eef2f8;font-weight:800;flex-shrink:0}.nav-btn strong{display:block;font-size:14px}.nav-btn small{display:block;color:#8995a5;font-size:11px;margin-top:1px}.nav-btn.active{background:var(--sky);color:#1d4cad}.nav-btn.active .n{background:#d5e4ff;color:#1d4cad}.nav-btn.done .n{background:#d9f4e8;color:#087855}.sidebar-note{background:#fff8e8;border:1px solid #f5e5bd;border-radius:14px;padding:13px;margin-top:15px;font-size:12px;color:#755218}.panel{padding:clamp(18px,3vw,30px);min-height:620px}.section-head{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;margin-bottom:22px}.eyebrow{font-size:11px;font-weight:800;color:var(--blue);letter-spacing:1.5px;text-transform:uppercase}.section-head h2{margin:4px 0 6px;font-size:clamp(22px,3vw,28px);letter-spacing:-.6px}.section-head p{margin:0;color:var(--muted);max-width:700px}.pill{white-space:nowrap;background:#f0f4f9;border-radius:99px;padding:7px 11px;font-size:12px;color:#516174;font-weight:750}.field{margin:18px 0}.field label,.field-label{display:block;font-weight:750;font-size:14px;margin-bottom:7px}.hint{color:var(--muted);font-weight:450;font-size:12px;margin-top:5px}.field input,.field textarea,.field select{width:100%;border:1px solid #d5dee9;border-radius:12px;padding:11px 13px;background:white;color:var(--ink);outline:none;transition:.15s}.field input:focus,.field textarea:focus,.field select:focus{border-color:#7097f4;box-shadow:0 0 0 3px #eaf0ff}.field textarea{resize:vertical;min-height:90px}.two-col{display:grid;grid-template-columns:1fr 1fr;gap:14px}.face-row{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px;margin:12px 0 6px}.face{border:2px solid #e5eaf1;border-radius:16px;background:white;padding:13px 6px 11px;text-align:center;min-width:0;transition:.15s;color:#445267}.face .emoji{font-size:clamp(29px,4vw,43px);display:block;margin-bottom:4px;filter:saturate(.95)}.face strong{display:block;font-size:12px}.face small{font-size:10px;color:#8390a1}.face:hover{transform:translateY(-2px);border-color:#b4c8ff}.face.selected{border-color:var(--blue);background:#f0f5ff;box-shadow:0 0 0 3px #e3ebff;color:#234ca9}.helper-box{background:#f6f9fd;border:1px solid #e2eaf4;border-radius:14px;padding:14px;margin:16px 0}.helper-box b{display:block;margin-bottom:4px}.helper-box p{margin:0;color:var(--muted);font-size:13px}.actions{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:24px;padding-top:18px;border-top:1px solid var(--line)}.btn{border:1px solid transparent;border-radius:11px;padding:10px 15px;font-weight:750;display:inline-flex;align-items:center;justify-content:center;gap:7px}.btn-primary{background:var(--blue);color:white}.btn-primary:hover{background:#244bb0}.btn-secondary{background:#fff;border-color:#d8e0ea;color:#344256}.btn-secondary:hover{background:#f6f8fb}.btn-quiet{background:transparent;color:#607084;border-color:transparent}.btn-danger{color:#a52b3b;background:#fff3f4;border-color:#ffd6db}.btn-small{padding:7px 10px;font-size:12px}.hidden{display:none!important}.idea-list{display:grid;gap:8px;margin-top:12px}.idea-item{display:flex;gap:10px;align-items:flex-start;background:#f7f9fc;border:1px solid var(--line);padding:12px;border-radius:12px}.idea-item .idea-text{flex:1}.idea-item button{border:0;background:transparent;color:#9b5360}.chip-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}.chip{border:1px solid #d9e2ed;padding:7px 10px;border-radius:99px;font-size:12px;background:white;color:#516174}.chip.selected{background:#e9f1ff;color:#244fb5;border-color:#adc6ff}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 22px}.stat{border:1px solid var(--line);border-radius:15px;padding:15px;background:#fbfcfe}.stat .big{font-size:25px;font-weight:850;letter-spacing:-.8px}.stat div:last-child{font-size:12px;color:var(--muted)}.record{border:1px solid var(--line);border-radius:15px;padding:14px;margin-top:10px;display:flex;align-items:flex-start;gap:12px}.record-face{font-size:30px}.record-main{flex:1;min-width:0}.record-main strong{display:block}.record-main p{margin:4px 0;color:var(--muted);font-size:13px;overflow-wrap:anywhere}.record-meta{font-size:11px;color:#8290a2}.empty{text-align:center;border:1px dashed #d1dbe8;background:#fbfcfe;padding:35px 18px;border-radius:15px;color:var(--muted)}.empty .emoji{font-size:42px}.empty h3{margin:8px 0;color:var(--ink)}.emotion-bars{display:grid;gap:10px}.bar-row{display:grid;grid-template-columns:35px 95px minmax(40px,1fr) 28px;gap:9px;align-items:center;font-size:12px}.bar-emoji{font-size:22px}.bar-track{height:10px;border-radius:99px;background:#eef2f7;overflow:hidden}.bar-fill{height:100%;background:linear-gradient(90deg,#7197f5,#31b6a5);border-radius:99px}.prompt{white-space:pre-wrap;background:#102a43;color:#e5f2ff;border-radius:14px;padding:15px;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;max-height:260px;overflow:auto}.footer{text-align:center;color:#8894a5;font-size:11px;padding:20px}.toast{position:fixed;bottom:20px;left:50%;transform:translate(-50%,20px);background:#12324a;color:white;padding:12px 17px;border-radius:12px;box-shadow:var(--shadow);opacity:0;pointer-events:none;transition:.25s;z-index:20;font-size:13px}.toast.show{opacity:1;transform:translate(-50%,0)}.progress{height:5px;background:#e8edf4}.progress span{display:block;height:100%;background:#5e85ed;width:20%;transition:width .2s}.tiny{font-size:11px;color:var(--muted)}@media(max-width:800px){.layout{grid-template-columns:1fr}.sidebar{position:static;display:flex;overflow-x:auto;gap:5px;padding:9px}.side-label,.sidebar-note{display:none}.nav-btn{min-width:125px;margin:0;padding:8px}.nav-btn .n{width:29px;height:29px}.nav-btn small{display:none}.panel{min-height:0}.topbar{align-items:flex-start;flex-direction:column}.welcome{align-items:flex-start;flex-direction:column}.privacy{max-width:none}.two-col{grid-template-columns:1fr}.stats{grid-template-columns:1fr 1fr}.face-row{gap:5px}.face{padding:9px 2px}.face strong{font-size:10px}.face small{display:none}.section-head{flex-direction:column}.actions{flex-wrap:wrap}.actions .left-actions{margin-right:auto}}@media print{body{background:white}.topbar,.sidebar,.welcome,.actions,.top-actions,.footer{display:none!important}.container{margin:0;padding:0}.layout{display:block}.panel{border:0;box-shadow:none;padding:0}.hidden{display:none!important}}
+</style>
+</head>
+<body>
+<header class="topbar">
+  <div class="brand"><div class="brand-icon">💡</div><div><h1>Design Thinking com Emojis</h1><p>Escutar · compreender · criar · testar · melhorar</p></div></div>
+  <div class="top-actions"><button class="btn btn-secondary" id="exportTop">⬇ Exportar dados</button><button class="btn btn-secondary" id="printTop">🖨 Imprimir</button></div>
+</header>
+<div class="progress"><span id="progressLine"></span></div>
+<main class="container">
+  <section class="welcome"><div><h2>Uma ideia de cada vez. Uma aprendizagem melhor. 😊</h2><p>Use os rostinhos para ouvir os estudantes, descobrir dificuldades e construir soluções junto com a turma. Este aplicativo funciona localmente, sem conta e sem enviar os dados para um servidor.</p></div><div class="privacy">🔒 <b>Privacidade:</b> os registros ficam neste navegador. Evite inserir informações pessoais sensíveis.</div></section>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="side-label">Etapas do projeto</div>
+      <button class="nav-btn active" data-step="0"><span class="n">1</span><span><strong>Empatia 💛</strong><small>Ouvir e sentir</small></span></button>
+      <button class="nav-btn" data-step="1"><span class="n">2</span><span><strong>Definir 🎯</strong><small>Encontrar o desafio</small></span></button>
+      <button class="nav-btn" data-step="2"><span class="n">3</span><span><strong>Ideação 💡</strong><small>Imaginar soluções</small></span></button>
+      <button class="nav-btn" data-step="3"><span class="n">4</span><span><strong>Protótipo 🧩</strong><small>Construir a ideia</small></span></button>
+      <button class="nav-btn" data-step="4"><span class="n">5</span><span><strong>Teste 🚀</strong><small>Experimentar e melhorar</small></span></button>
+      <button class="nav-btn" data-step="5"><span class="n">📊</span><span><strong>Painel</strong><small>Ver os registros</small></span></button>
+      <div class="sidebar-note">✨ <b>Dica para o professor</b><br>Não existe emoção errada. Use as respostas para ouvir, acolher e planejar intervenções — não para rotular estudantes.</div>
+    </aside>
+    <section class="panel">
+      <!-- STEP 1 -->
+      <div class="step-view" data-view="0">
+        <div class="section-head"><div><div class="eyebrow">Etapa 1 de 5 · Empatia</div><h2>Como você está se sentindo? 😊</h2><p>Vamos entender a experiência do estudante antes de escolher uma solução. Você pode registrar uma resposta individual ou uma percepção da turma.</p></div><span class="pill">💛 Escutar primeiro</span></div>
+        <div class="two-col">
+          <div class="field"><label for="student">Estudante ou código (opcional)</label><input id="student" placeholder="Ex.: Aluno 01 ou iniciais"></div>
+          <div class="field"><label for="className">Turma</label><input id="className" placeholder="Ex.: 9º A"></div>
+        </div>
+        <div class="field"><label for="subject">Área ou assunto</label><select id="subject"><option>Matemática</option><option>Língua Portuguesa</option><option>Ciências</option><option>Tecnologia e Robótica</option><option>História</option><option>Geografia</option><option>Outra área</option></select></div>
+        <div class="field"><div class="field-label">Escolha o rostinho que mais combina com você hoje</div><div class="face-row" id="moodFaces">
+          <button class="face" data-mood="0" type="button"><span class="emoji">😟</span><strong>Estou com muita dificuldade</strong><small>Preciso de ajuda</small></button>
+          <button class="face" data-mood="1" type="button"><span class="emoji">😕</span><strong>Estou confuso(a)</strong><small>Tenho dúvidas</small></button>
+          <button class="face" data-mood="2" type="button"><span class="emoji">😐</span><strong>Estou mais ou menos</strong><small>Estou tentando</small></button>
+          <button class="face" data-mood="3" type="button"><span class="emoji">🙂</span><strong>Estou entendendo</strong><small>Estou avançando</small></button>
+          <button class="face" data-mood="4" type="button"><span class="emoji">😄</span><strong>Estou confiante</strong><small>Consigo explicar</small></button>
+        </div><div class="hint">A emoção é uma pista para conversar, não uma nota nem uma avaliação do aluno.</div></div>
+        <div class="field"><label for="hardest">O que está mais difícil neste momento?</label><textarea id="hardest" placeholder="Ex.: entender problemas com porcentagem, organizar as ideias, começar a atividade..."></textarea></div>
+        <div class="field"><label for="helps">O que ajudaria você a aprender melhor?</label><textarea id="helps" placeholder="Ex.: exemplos resolvidos, jogo, explicação em etapas, trabalhar em dupla..."></textarea></div>
+        <div class="actions"><div class="left-actions tiny">Os campos estudante e respostas são opcionais.</div><button class="btn btn-primary" data-next="1">Próxima etapa →</button></div>
+      </div>
+      <!-- STEP 2 -->
+      <div class="step-view hidden" data-view="1">
+        <div class="section-head"><div><div class="eyebrow">Etapa 2 de 5 · Definir</div><h2>Qual problema vamos resolver? 🎯</h2><p>Transforme as observações em um desafio claro, específico e possível de enfrentar.</p></div><span class="pill">🔎 Foco no problema</span></div>
+        <div class="field"><label for="challenge">Complete: “Como poderíamos ajudar...”</label><textarea id="challenge" placeholder="Ex.: Como poderíamos ajudar alunos do 9º ano a compreender porcentagens de um jeito visual e divertido?"></textarea><div class="hint">Uma boa pergunta começa com “Como poderíamos...” e abre espaço para várias soluções.</div></div>
+        <div class="two-col"><div class="field"><label for="evidence">O que observamos? (evidências)</label><textarea id="evidence" placeholder="Ex.: 12 alunos erraram questões de porcentagem no diagnóstico."></textarea></div><div class="field"><label for="goal">Como saberemos que melhorou?</label><textarea id="goal" placeholder="Ex.: mais alunos resolvem corretamente uma atividade parecida depois da intervenção."></textarea></div></div>
+        <div class="helper-box"><b>🧠 Lembrete</b><p>Evite definir o estudante como “o problema”. Descreva a habilidade que precisa de apoio, as barreiras e o contexto de aprendizagem.</p></div>
+        <div class="actions"><button class="btn btn-secondary" data-prev="0">← Voltar</button><button class="btn btn-primary" data-next="2">Próxima etapa →</button></div>
+      </div>
+      <!-- STEP 3 -->
+      <div class="step-view hidden" data-view="2">
+        <div class="section-head"><div><div class="eyebrow">Etapa 3 de 5 · Ideação</div><h2>Vamos criar soluções! 💡</h2><p>Primeiro, gere possibilidades sem julgar. Depois escolha uma ideia simples para experimentar.</p></div><span class="pill">🌱 Muitas ideias</span></div>
+        <div class="field"><label for="newIdea">Escreva uma ideia e adicione à lista</label><div class="two-col"><input id="newIdea" placeholder="Ex.: jogo de cartas de porcentagem"><button class="btn btn-secondary" id="addIdea">＋ Adicionar ideia</button></div><div class="hint">Exemplos: jogo educativo, vídeo curto, atividade em dupla, robô, quiz, mapa mental, simulação.</div></div>
+        <div id="ideaList" class="idea-list"><div class="empty"><div class="emoji">🌟</div><b>Suas ideias aparecerão aqui</b><p>Adicione pelo menos uma possibilidade para registrar a sessão.</p></div></div>
+        <div class="helper-box"><b>🤖 Quer usar uma IA para ampliar as ideias?</b><p>O aplicativo cria um comando pronto para você copiar no ChatGPT ou em outra IA. Ele não envia os dados automaticamente nem precisa de chave de API.</p><div style="margin-top:12px"><button class="btn btn-primary" id="makePrompt">✨ Montar comando para IA</button></div></div>
+        <div class="field hidden" id="promptWrap"><label for="aiPrompt">Comando para copiar</label><div id="aiPrompt" class="prompt"></div><div style="margin-top:10px;display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-secondary" id="copyPrompt">📋 Copiar comando</button><button class="btn btn-secondary" id="downloadPrompt">⬇ Salvar TXT</button></div></div>
+        <div class="field"><label for="chosenIdea">Qual ideia vamos experimentar primeiro?</label><input id="chosenIdea" placeholder="Escreva a ideia escolhida"></div>
+        <div class="actions"><button class="btn btn-secondary" data-prev="1">← Voltar</button><button class="btn btn-primary" data-next="3">Próxima etapa →</button></div>
+      </div>
+      <!-- STEP 4 -->
+      <div class="step-view hidden" data-view="3">
+        <div class="section-head"><div><div class="eyebrow">Etapa 4 de 5 · Prototipagem</div><h2>Vamos construir uma versão simples 🧩</h2><p>O protótipo não precisa estar perfeito. Ele precisa ser simples o bastante para testar a ideia e aprender com o resultado.</p></div><span class="pill">🛠 Mão na massa</span></div>
+        <div class="field"><label>Que tipo de protótipo será criado?</label><div class="chip-row" id="prototypeChips"><button class="chip" data-value="Jogo ou quiz">🎮 Jogo ou quiz</button><button class="chip" data-value="Atividade impressa">📝 Atividade impressa</button><button class="chip" data-value="Aplicativo ou site">💻 Aplicativo ou site</button><button class="chip" data-value="Vídeo ou apresentação">🎬 Vídeo ou apresentação</button><button class="chip" data-value="Robô ou experimento">🤖 Robô ou experimento</button><button class="chip" data-value="Outra ideia">✨ Outra ideia</button></div></div>
+        <div class="field"><label for="prototypeDesc">Como o protótipo vai funcionar?</label><textarea id="prototypeDesc" placeholder="Ex.: o aluno responde a 5 perguntas; ao errar, recebe uma dica e tenta novamente."></textarea></div>
+        <div class="two-col"><div class="field"><label for="materials">Materiais ou ferramentas</label><input id="materials" placeholder="Ex.: computador, micro:bit, papel, Canva"></div><div class="field"><label for="responsible">Quem participará da criação?</label><input id="responsible" placeholder="Ex.: professor e grupos de 4 alunos"></div></div>
+        <div class="helper-box"><b>✅ Protótipo rápido</b><p>Combine um prazo curto, prepare uma primeira versão e observe como as pessoas a utilizam. Não é necessário esperar que tudo esteja perfeito.</p></div>
+        <div class="actions"><button class="btn btn-secondary" data-prev="2">← Voltar</button><button class="btn btn-primary" data-next="4">Próxima etapa →</button></div>
+      </div>
+      <!-- STEP 5 -->
+      <div class="step-view hidden" data-view="4">
+        <div class="section-head"><div><div class="eyebrow">Etapa 5 de 5 · Testar</div><h2>Funcionou para quem vai usar? 🚀</h2><p>Teste com os estudantes, acolha opiniões e registre o que deve ser mantido ou melhorado.</p></div><span class="pill">🔁 Aprender e ajustar</span></div>
+        <div class="field"><div class="field-label">Como o estudante se sentiu depois de experimentar?</div><div class="face-row" id="afterFaces">
+          <button class="face" data-mood="0" type="button"><span class="emoji">😟</span><strong>Continua difícil</strong><small>Preciso de apoio</small></button><button class="face" data-mood="1" type="button"><span class="emoji">😕</span><strong>Ainda tenho dúvidas</strong><small>Quase lá</small></button><button class="face" data-mood="2" type="button"><span class="emoji">😐</span><strong>Melhorou um pouco</strong><small>Estou tentando</small></button><button class="face" data-mood="3" type="button"><span class="emoji">🙂</span><strong>Entendi melhor</strong><small>Estou avançando</small></button><button class="face" data-mood="4" type="button"><span class="emoji">😄</span><strong>Consigo explicar</strong><small>Estou confiante</small></button>
+        </div></div>
+        <div class="two-col"><div class="field"><label for="worked">O que funcionou bem?</label><textarea id="worked" placeholder="Ex.: as dicas ajudaram a entender o erro."></textarea></div><div class="field"><label for="improve">O que precisamos mudar?</label><textarea id="improve" placeholder="Ex.: incluir exemplos mais simples no começo."></textarea></div></div>
+        <div class="field"><label for="nextAction">Próxima ação combinada</label><input id="nextAction" placeholder="Ex.: testar uma nova rodada na próxima aula"></div>
+        <div class="helper-box"><b>🔄 Design Thinking é um ciclo</b><p>Se a solução não funcionar para todos, isso não é fracasso: é uma informação importante para voltar, ajustar e testar de novo.</p></div>
+        <div class="actions"><button class="btn btn-secondary" data-prev="3">← Voltar</button><button class="btn btn-primary" id="saveRecord">💾 Salvar registro</button></div>
+      </div>
+      <!-- DASHBOARD -->
+      <div class="step-view hidden" data-view="5">
+        <div class="section-head"><div><div class="eyebrow">Acompanhamento</div><h2>Painel de registros 📊</h2><p>Consulte as experiências registradas neste navegador. Os dados são locais e podem ser exportados para backup.</p></div><span class="pill" id="recordCountPill">0 registros</span></div>
+        <div class="stats"><div class="stat"><div class="big" id="statTotal">0</div><div>Registros salvos</div></div><div class="stat"><div class="big" id="statMood">—</div><div>Emoção mais comum no início</div></div><div class="stat"><div class="big" id="statSubject">—</div><div>Área mais registrada</div></div></div>
+        <div class="field"><label>Como os estudantes se sentiram no início?</label><div class="emotion-bars" id="emotionBars"></div></div>
+        <div class="field"><label>Registros recentes</label><div id="records"><div class="empty"><div class="emoji">🗂️</div><h3>Ainda não há registros</h3><p>Preencha as etapas e salve o primeiro projeto para vê-lo aqui.</p><button class="btn btn-primary" data-goto="0">Começar um registro</button></div></div></div>
+        <div class="actions"><button class="btn btn-secondary" id="newRecord">＋ Novo registro</button><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn btn-secondary" id="exportJson">⬇ Exportar JSON</button><button class="btn btn-secondary" id="exportCsv">⬇ Exportar CSV</button><button class="btn btn-danger" id="clearRecords">🗑 Apagar todos</button></div></div>
+        <p class="tiny">Os resultados dos emojis ajudam a iniciar conversas, mas não substituem avaliação pedagógica nem devem ser usados isoladamente para tomar decisões sobre um estudante.</p>
+      </div>
+    </section>
+  </div>
+  <div class="footer">Design Thinking com Emojis · Recurso educativo local · Desenvolvido para apoiar a escuta, a criatividade e a melhoria contínua.</div>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(() => {
+  const STORE_KEY = 'designThinkingEmojis.records.v1';
+  const moods = [
+    {emoji:'😟', label:'Muita dificuldade'},
+    {emoji:'😕', label:'Confuso(a)'},
+    {emoji:'😐', label:'Mais ou menos'},
+    {emoji:'🙂', label:'Entendendo'},
+    {emoji:'😄', label:'Confiante'}
+  ];
+  const $ = (s, root=document) => root.querySelector(s);
+  const $$ = (s, root=document) => [...root.querySelectorAll(s)];
+  let currentStep = 0;
+  let mood = null;
+  let afterMood = null;
+  let prototypeType = '';
+  let ideas = [];
+  let currentPrompt = '';
+  let records = loadRecords();
+
+  function loadRecords(){ try { const x=JSON.parse(localStorage.getItem(STORE_KEY)||'[]'); return Array.isArray(x)?x:[]; } catch(e){ return []; } }
+  function persist(){ try { localStorage.setItem(STORE_KEY, JSON.stringify(records)); } catch(e){ showToast('Não foi possível salvar. Verifique o espaço disponível no navegador.'); } }
+  function escapeHtml(value){ return String(value ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
+  function val(id){ return ($('#'+id)?.value || '').trim(); }
+  function setVal(id,v){ const el=$('#'+id); if(el) el.value=v||''; }
+  function showToast(message){ const t=$('#toast'); t.textContent=message; t.classList.add('show'); clearTimeout(showToast.timer); showToast.timer=setTimeout(()=>t.classList.remove('show'),2600); }
+  function gotoStep(step){ currentStep=Math.max(0,Math.min(5,Number(step))); $$('.step-view').forEach(v=>v.classList.toggle('hidden',Number(v.dataset.view)!==currentStep)); $$('.nav-btn').forEach(b=>{let n=Number(b.dataset.step);b.classList.toggle('active',n===currentStep);b.classList.toggle('done',n<currentStep&&n<5);}); $('#progressLine').style.width=(currentStep===5?100:(currentStep+1)*20)+'%'; if(currentStep===5) renderDashboard(); window.scrollTo({top:0,behavior:'smooth'}); }
+  function selectFace(containerId, dataAttr, value){ const root=$('#'+containerId); $$('.face',root).forEach(b=>b.classList.toggle('selected',Number(b.dataset[dataAttr])===value)); }
+  $$('.nav-btn').forEach(b=>b.addEventListener('click',()=>gotoStep(b.dataset.step)));
+  $$('[data-next]').forEach(b=>b.addEventListener('click',()=>gotoStep(b.dataset.next)));
+  $$('[data-prev]').forEach(b=>b.addEventListener('click',()=>gotoStep(b.dataset.prev)));
+  $$('[data-goto]').forEach(b=>b.addEventListener('click',()=>gotoStep(b.dataset.goto)));
+  $$('#moodFaces .face').forEach(b=>b.addEventListener('click',()=>{mood=Number(b.dataset.mood);selectFace('moodFaces','mood',mood);}));
+  $$('#afterFaces .face').forEach(b=>b.addEventListener('click',()=>{afterMood=Number(b.dataset.mood);selectFace('afterFaces','mood',afterMood);}));
+  $$('#prototypeChips .chip').forEach(b=>b.addEventListener('click',()=>{prototypeType=b.dataset.value; $$('#prototypeChips .chip').forEach(x=>x.classList.toggle('selected',x===b));}));
+
+  function renderIdeas(){ const root=$('#ideaList'); if(!ideas.length){root.innerHTML='<div class="empty"><div class="emoji">🌟</div><b>Suas ideias aparecerão aqui</b><p>Adicione pelo menos uma possibilidade para registrar a sessão.</p></div>';return;} root.innerHTML=ideas.map((idea,i)=>`<div class="idea-item"><div>💡</div><div class="idea-text">${escapeHtml(idea)}</div><button type="button" data-remove-idea="${i}" aria-label="Remover ideia">✕</button></div>`).join(''); $$('[data-remove-idea]').forEach(b=>b.addEventListener('click',()=>{ideas.splice(Number(b.dataset.removeIdea),1);renderIdeas();})); }
+  function addIdea(){const input=$('#newIdea');const s=input.value.trim();if(!s){showToast('Escreva uma ideia primeiro.');input.focus();return;}ideas.push(s);input.value='';renderIdeas();input.focus();}
+  $('#addIdea').addEventListener('click',addIdea); $('#newIdea').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();addIdea();}});
+  function buildPrompt(){
+    const question=val('challenge')||val('hardest')||'recomposição das aprendizagens';
+    const subject=$('#subject').value;
+    const needs=val('hardest')||'ainda não descritas';
+    const helps=val('helps')||'ainda não descritos';
+    const ideaList=ideas.length?ideas.map((x,i)=>`${i+1}. ${x}`).join('\n'):'Ainda não foram registradas ideias.';
+    return `Atue como facilitador de Design Thinking para a educação básica.\n\nCONTEXTO\nÁrea: ${subject}\nDesafio: ${question}\nDificuldade relatada: ${needs}\nO que pode ajudar: ${helps}\nIdeias já levantadas:\n${ideaList}\n\nTAREFA\n1. Sugira 5 soluções criativas, inclusivas e de baixo custo para esse desafio.\n2. Para cada solução, explique como funciona e quais materiais exige.\n3. Escolha uma solução simples para prototipar em uma aula de 50 minutos.\n4. Crie um teste com critérios observáveis de aprendizagem, sem rotular estudantes.\n5. Inclua adaptações para estudantes em diferentes níveis.\n6. Informe como o professor pode verificar se a solução ajudou, comparando evidências antes e depois.\n\nNão invente resultados de alunos. Faça sugestões que o professor possa revisar e adaptar.`;
+  }
+  $('#makePrompt').addEventListener('click',()=>{currentPrompt=buildPrompt();$('#aiPrompt').textContent=currentPrompt;$('#promptWrap').classList.remove('hidden');});
+  $('#copyPrompt').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(currentPrompt);showToast('Comando copiado! Cole na IA que você utiliza.');}catch(e){const r=document.createRange();r.selectNodeContents($('#aiPrompt'));const s=window.getSelection();s.removeAllRanges();s.addRange(r);showToast('Selecione o comando e copie com Ctrl+C.');}});
+  $('#downloadPrompt').addEventListener('click',()=>downloadText('comando_design_thinking_ia.txt',currentPrompt));
+  function collectRecord(){
+    if(mood===null){showToast('Selecione um rostinho na etapa Empatia antes de salvar.');gotoStep(0);return null;}
+    const chosen=val('chosenIdea');
+    const record={id:(crypto&&crypto.randomUUID)?crypto.randomUUID():String(Date.now()),date:new Date().toISOString(),student:val('student'),className:val('className'),subject:$('#subject').value,mood,moodLabel:moods[mood].label,hardest:val('hardest'),helps:val('helps'),challenge:val('challenge'),evidence:val('evidence'),goal:val('goal'),ideas:[...ideas],chosenIdea:chosen,prototypeType,prototypeDesc:val('prototypeDesc'),materials:val('materials'),responsible:val('responsible'),afterMood,afterMoodLabel:afterMood===null?'Não informado':moods[afterMood].label,worked:val('worked'),improve:val('improve'),nextAction:val('nextAction')};
+    if(!record.challenge && !record.hardest && !record.helps){showToast('Registre uma dificuldade ou o desafio para salvar a experiência.');gotoStep(1);return null;}
+    return record;
+  }
+  $('#saveRecord').addEventListener('click',()=>{const r=collectRecord();if(!r)return;records.unshift(r);persist();resetForm(false);gotoStep(5);showToast('Registro salvo neste navegador!');});
+  function resetForm(clearMood=true){['student','className','hardest','helps','challenge','evidence','goal','chosenIdea','prototypeDesc','materials','responsible','worked','improve','nextAction'].forEach(id=>setVal(id,''));$('#subject').selectedIndex=0;ideas=[];prototypeType='';afterMood=null;currentPrompt='';$('#promptWrap').classList.add('hidden');$$('#prototypeChips .chip').forEach(x=>x.classList.remove('selected'));if(clearMood)mood=null;$$('#moodFaces .face,#afterFaces .face').forEach(x=>x.classList.remove('selected'));renderIdeas();}
+  $('#newRecord').addEventListener('click',()=>{resetForm();gotoStep(0);});
+  function renderDashboard(){
+    $('#statTotal').textContent=records.length;$('#recordCountPill').textContent=records.length+' registro'+(records.length===1?'':'s');
+    const valid=records.filter(r=>Number.isInteger(r.mood));
+    const moodCounts=[0,0,0,0,0];valid.forEach(r=>moodCounts[r.mood]++);
+    const maxMood=Math.max(...moodCounts);$('#statMood').textContent=valid.length?moods[moodCounts.indexOf(maxMood)].emoji+' '+moods[moodCounts.indexOf(maxMood)].label:'—';
+    const subjects={};records.forEach(r=>subjects[r.subject]=(subjects[r.subject]||0)+1);const best=Object.keys(subjects).sort((a,b)=>subjects[b]-subjects[a])[0];$('#statSubject').textContent=best||'—';
+    const bars=$('#emotionBars');bars.innerHTML=moods.map((m,i)=>`<div class="bar-row"><span class="bar-emoji">${m.emoji}</span><span>${m.label}</span><div class="bar-track"><div class="bar-fill" style="width:${valid.length?moodCounts[i]/valid.length*100:0}%"></div></div><b>${moodCounts[i]}</b></div>`).join('');
+    const root=$('#records');if(!records.length){root.innerHTML='<div class="empty"><div class="emoji">🗂️</div><h3>Ainda não há registros</h3><p>Preencha as etapas e salve o primeiro projeto para vê-lo aqui.</p><button class="btn btn-primary" data-goto="0">Começar um registro</button></div>';$$('[data-goto]',root).forEach(b=>b.addEventListener('click',()=>gotoStep(b.dataset.goto)));return;}
+    root.innerHTML=records.map(r=>{const dt=new Date(r.date);const dateText=Number.isNaN(dt.getTime())?'Data não disponível':dt.toLocaleString('pt-BR');return `<article class="record"><div class="record-face">${moods[Number.isInteger(r.mood)?r.mood:2].emoji}</div><div class="record-main"><strong>${escapeHtml(r.challenge||r.hardest||'Registro de Design Thinking')}</strong><p>${escapeHtml(r.subject||'Área não informada')} · ${escapeHtml(r.className||'Turma não informada')} · ${escapeHtml(r.student||'Estudante não identificado')}</p><p><b>Ideia:</b> ${escapeHtml(r.chosenIdea||'Ainda não escolhida')} ${r.afterMood!==null&&r.afterMood!==undefined?' · <b>Depois:</b> '+moods[Number.isInteger(r.afterMood)?r.afterMood:2].emoji:''}</p><div class="record-meta">${escapeHtml(dateText)}${r.prototypeType?' · Protótipo: '+escapeHtml(r.prototypeType):''}</div><div style="display:flex;gap:7px;flex-wrap:wrap;margin-top:9px"><button class="btn btn-secondary btn-small" data-detail="${escapeHtml(r.id)}">Ver detalhes</button><button class="btn btn-danger btn-small" data-delete="${escapeHtml(r.id)}">Excluir</button></div><div class="hidden" data-record-detail="${escapeHtml(r.id)}"></div></div></article>`;}).join('');
+    $$('[data-detail]').forEach(b=>b.addEventListener('click',()=>{const r=records.find(x=>x.id===b.dataset.detail);if(!r)return;const box=$(`[data-record-detail="${CSS.escape(r.id)}"]`);if(!box)return; if(!box.classList.contains('hidden')){box.classList.add('hidden');b.textContent='Ver detalhes';return;} box.classList.remove('hidden');box.innerHTML=`<div class="helper-box"><b>Empatia</b><p>Sentimento inicial: ${moods[r.mood]?.emoji||'—'} ${escapeHtml(r.moodLabel||'')}<br>Dificuldade: ${escapeHtml(r.hardest||'—')}<br>O que ajuda: ${escapeHtml(r.helps||'—')}</p><br><b>Definição</b><p>Desafio: ${escapeHtml(r.challenge||'—')}<br>Evidências: ${escapeHtml(r.evidence||'—')}<br>Meta: ${escapeHtml(r.goal||'—')}</p><br><b>Ideação e protótipo</b><p>Ideias: ${escapeHtml((r.ideas||[]).join('; ')||'—')}<br>Escolhida: ${escapeHtml(r.chosenIdea||'—')}<br>Tipo: ${escapeHtml(r.prototypeType||'—')}<br>Descrição: ${escapeHtml(r.prototypeDesc||'—')}<br>Materiais: ${escapeHtml(r.materials||'—')}</p><br><b>Teste e melhoria</b><p>Depois: ${moods[r.afterMood]?.emoji||'—'} ${escapeHtml(r.afterMoodLabel||'')}<br>Funcionou: ${escapeHtml(r.worked||'—')}<br>Melhorar: ${escapeHtml(r.improve||'—')}<br>Próxima ação: ${escapeHtml(r.nextAction||'—')}</p></div><button class="btn btn-secondary btn-small" data-print-one="${escapeHtml(r.id)}">🖨 Imprimir detalhes</button>`;const printBtn=$('[data-print-one]',box);printBtn.addEventListener('click',()=>printRecord(r));b.textContent='Ocultar detalhes';}));
+    $$('[data-delete]').forEach(b=>b.addEventListener('click',()=>{if(!confirm('Excluir este registro?'))return;records=records.filter(x=>x.id!==b.dataset.delete);persist();renderDashboard();showToast('Registro excluído.');}));
+  }
+  function downloadText(filename,text, type='text/plain;charset=utf-8'){const blob=new Blob([text],{type});const url=URL.createObjectURL(blob);const a=document.createElement('a');a.href=url;a.download=filename;document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);}
+  function exportJson(){if(!records.length){showToast('Ainda não há registros para exportar.');return;}downloadText('design_thinking_registros.json',JSON.stringify(records,null,2),'application/json;charset=utf-8');showToast('Arquivo JSON exportado.');}
+  function csvCell(v){return '"'+String(v??'').replace(/"/g,'""')+'"';}
+  function exportCsv(){
+    if(!records.length){showToast('Ainda não há registros para exportar.');return;}
+    const cols=[['data','Data'],['student','Estudante/código'],['className','Turma'],['subject','Área'],['moodLabel','Emoção inicial'],['hardest','Dificuldade'],['helps','O que ajuda'],['challenge','Desafio'],['evidence','Evidências'],['goal','Meta'],['ideas','Ideias'],['chosenIdea','Ideia escolhida'],['prototypeType','Tipo de protótipo'],['prototypeDesc','Descrição do protótipo'],['materials','Materiais'],['afterMoodLabel','Emoção após teste'],['worked','O que funcionou'],['improve','O que melhorar'],['nextAction','Próxima ação']];
+    const header=cols.map(c=>csvCell(c[1])).join(';');
+    const rows=records.map(r=>cols.map(([k])=>{
+      const value=k==='ideas'?(r.ideas||[]).join(' | '):(k==='data'?new Date(r.date).toLocaleString('pt-BR'):r[k]);
+      return csvCell(value);
+    }).join(';'));
+    downloadText('design_thinking_registros.csv','\ufeff'+[header,...rows].join('\r\n'),'text/csv;charset=utf-8');
+    showToast('Arquivo CSV exportado.');
+  }
+  function printRecord(r){const html=`<!doctype html><html lang="pt-BR"><meta charset="utf-8"><title>Registro Design Thinking</title><style>body{font:14px Arial;margin:35px;color:#182638}h1{font-size:24px}h2{font-size:17px;border-bottom:1px solid #ddd;padding-bottom:5px}p{line-height:1.5}.muted{color:#667}</style><h1>Registro de Design Thinking</h1><p>${escapeHtml(r.subject)} · ${escapeHtml(r.className)} · ${escapeHtml(new Date(r.date).toLocaleString('pt-BR'))}</p><h2>1. Empatia</h2><p>${moods[r.mood]?.emoji||''} ${escapeHtml(r.moodLabel)}<br>Dificuldade: ${escapeHtml(r.hardest||'—')}<br>O que ajuda: ${escapeHtml(r.helps||'—')}</p><h2>2. Definir</h2><p>Desafio: ${escapeHtml(r.challenge||'—')}<br>Evidências: ${escapeHtml(r.evidence||'—')}<br>Meta: ${escapeHtml(r.goal||'—')}</p><h2>3. Ideação</h2><p>Ideias: ${escapeHtml((r.ideas||[]).join('; ')||'—')}<br>Escolhida: ${escapeHtml(r.chosenIdea||'—')}</p><h2>4. Protótipo</h2><p>Tipo: ${escapeHtml(r.prototypeType||'—')}<br>${escapeHtml(r.prototypeDesc||'—')}<br>Materiais: ${escapeHtml(r.materials||'—')}</p><h2>5. Teste</h2><p>${moods[r.afterMood]?.emoji||''} ${escapeHtml(r.afterMoodLabel||'—')}<br>Funcionou: ${escapeHtml(r.worked||'—')}<br>Melhorar: ${escapeHtml(r.improve||'—')}<br>Próxima ação: ${escapeHtml(r.nextAction||'—')}</p><script>window.onload=()=>window.print()<\/script></html>`;const w=window.open('','_blank');if(!w){showToast('Permita pop-ups para imprimir os detalhes.');return;}w.document.open();w.document.write(html);w.document.close();}
+  $('#exportJson').addEventListener('click',exportJson);$('#exportCsv').addEventListener('click',exportCsv);$('#exportTop').addEventListener('click',exportJson);$('#printTop').addEventListener('click',()=>window.print());
+  $('#clearRecords').addEventListener('click',()=>{if(!records.length){showToast('Não há registros para apagar.');return;}if(!confirm('Apagar TODOS os registros salvos neste navegador? Esta ação não pode ser desfeita.'))return;records=[];persist();renderDashboard();showToast('Todos os registros foram apagados.');});
+  renderIdeas();gotoStep(0);
+})();
+</script>
+</body>
+</html>
